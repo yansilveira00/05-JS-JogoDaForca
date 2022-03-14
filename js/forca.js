@@ -2,213 +2,97 @@ let tentativas = 6;
 let listaDinamica = [];
 let palavraSecretaCategoria;
 let palavraSecretaSorteada;
+
 const palavras = [
     palavra001 = {
-        nome: "IRLANDA",
-        categoria:"LUGARES"
+        nome: "SALINAS",
+        categoria:"TEMA: CIDADES"
     },
     palavra002 = {
-        nome: "EQUADOR",
-        categoria:"LUGARES"
+        nome: "TAIOBEIRAS",
+        categoria:"TEMA: CIDADES"
     },
     palavra003 = {
-        nome: "CHILE",
-        categoria:"LUGARES"
-    },
-    palavra004 = {
-        nome: "INDONESIA",
-        categoria:"LUGARES"
-    },
-    palavra005 = {
-        nome: "MALDIVAS",
-        categoria:"LUGARES"
-    },
-    palavra006 = {
-        nome: "INGLATERRA",
-        categoria:"LUGARES"
-    },
-    palavra007 = {
-        nome: "GROELANDIA",
-        categoria:"LUGARES"
-    },
-    palavra008 = {
-        nome: "UZBEQUISTAO",
-        categoria:"LUGARES"
-    },
-    palavra009 = {
-        nome: "INDONESIA",
-        categoria:"LUGARES"
-    },
-    palavra010 = {
-        nome: "CREGUENHEM",
-        categoria:"LUGARES"
+        nome: "MONTEZUMA",
+        categoria:"TEMA: CIDADES"
     },
     palavra011 = {
         nome: "BICICLETA",
-        categoria:"TRANSPORTE"
+        categoria:"TEMA: TRANSPORTE"
     },
     palavra012 = {
-        nome: "LANCHA",
-        categoria:"TRANSPORTE"
+        nome: "CARRO",
+        categoria:"TEMA: TRANSPORTE"
     },
     palavra013 = {
-        nome: "NAVIO",
-        categoria:"TRANSPORTE"
+        nome: "MOTO",
+        categoria:"TEMA: TRANSPORTE"
     },
     palavra014 = {
         nome: "TELEFERICO",
-        categoria:"TRANSPORTE"
+        categoria:"TEMA: TRANSPORTE"
     },
     palavra015 = {
         nome: "MOTOCICLETA",
-        categoria:"TRANSPORTE"
-    },
-    palavra016 = {
-        nome: "BARCO",
-        categoria:"TRANSPORTE"
-    },
-    palavra017 = {
-        nome: "AERONAVE",
-        categoria:"TRANSPORTE"
-    },
-    palavra018 = {
-        nome: "TREM",
-        categoria:"TRANSPORTE"
-    },
-    palavra019 = {
-        nome: "CAIAQUE",
-        categoria:"TRANSPORTE"
-    },
-    palavra020 = {
-        nome: "FUNICULAR",
-        categoria:"TRANSPORTE"
+        categoria:"TEMA: TRANSPORTE"
     },
     palavra021 = {
-        nome: "XICARA",
-        categoria:"OBJETOS"
+        nome: "LAPIS",
+        categoria:"TEMA: OBJETOS"
     },
     palavra022 = {
-        nome: "MOEDA",
-        categoria:"OBJETOS"
+        nome: "CANETA",
+        categoria:"TEMA: OBJETOS"
     },
     palavra023 = {
-        nome: "ESPARADRAPO",
-        categoria:"OBJETOS"
+        nome: "BORRACHA",
+        categoria:"TEMA: OBJETOS"
     },
     palavra024 = {
-        nome: "SINO",
-        categoria:"OBJETOS"
-    },
-    palavra025 = {
-        nome: "CHUVEIRO",
-        categoria:"OBJETOS"
-    },
-    palavra026 = {
-        nome: "TAMBORETE",
-        categoria:"OBJETOS"
-    },
-    palavra027 = {
-        nome: "LAMPADA",
-        categoria:"OBJETOS"
-    },
-    palavra028 = {
-        nome: "BOCAL",
-        categoria:"OBJETOS"
-    },
-    palavra029 = {
-        nome: "CORTINA",
-        categoria:"OBJETOS"
-    },
-    palavra030 = {
-        nome: "LAPIS",
-        categoria:"OBJETOS"
+        nome: "GARRAFA",
+        categoria:"TEMA: OBJETOS"
     },
     palavra031 = {
-        nome: "MELANCIA",
-        categoria:"ALIMENTOS"
+        nome: "MANGA",
+        categoria:"TEMA: ALIMENTOS"
     },
     palavra032 = {
-        nome: "AMENDOIM",
-        categoria:"ALIMENTOS"
+        nome: "BANANA",
+        categoria:"TEMA: ALIMENTOS"
     },
     palavra033 = {
-        nome: "ESFIRRA",
-        categoria:"ALIMENTOS"
+        nome: "HAMBURGUER",
+        categoria:"TEMA: ALIMENTOS"
     },
     palavra034 = {
-        nome: "GOROROBA",
-        categoria:"ALIMENTOS"
-    },
-    palavra035 = {
-        nome: "JANTAR",
-        categoria:"ALIMENTOS"
-    },
-    palavra036 = {
-        nome: "SABOROSO",
-        categoria:"ALIMENTOS"
-    },
-    palavra037 = {
-        nome: "DESJEJUM",
-        categoria:"ALIMENTOS"
-    },
-    palavra038 = {
-        nome: "MASTIGAR",
-        categoria:"ALIMENTOS"
-    },
-    palavra039 = {
-        nome: "ENGOLIR",
-        categoria:"ALIMENTOS"
+        nome: "ARROZ",
+        categoria:"TEMA: ALIMENTOS"
     },
     palavra040 = {
-        nome: "DOCERIA",
-        categoria:"ALIMENTOS"
-    },
-    palavra040 = {
-        nome: "DRAGAO",
-        categoria:"ANIMAIS"
+        nome: "CACHORRO",
+        categoria:"TEMA: ANIMAIS"
     },
     palavra041 = {
-        nome: "GALINHA",
-        categoria:"ANIMAIS"
+        nome: "GATO",
+        categoria:"TEMA: ANIMAIS"
     },
     palavra042 = {
-        nome: "PAVAO",
-        categoria:"ANIMAIS"
+        nome: "RATO",
+        categoria:"TEMA: ANIMAIS"
     },
     palavra043 = {
-        nome: "CAMELO",
-        categoria:"ANIMAIS"
+        nome: "PATO",
+        categoria:"TEMA: ANIMAIS"
     },
     palavra044 = {
-        nome: "PERU",
-        categoria:"ANIMAIS"
+        nome: "PEIXE",
+        categoria:"TEMA: ANIMAIS"
     },
     palavra045 = {
-        nome: "ZEBRA",
-        categoria:"ANIMAIS"
-    },
-    palavra046 = {
-        nome: "DROMEDARIO",
-        categoria:"ANIMAIS"
-    },
-    palavra047 = {
-        nome: "CALANGO",
-        categoria:"ANIMAIS"
-    },
-    palavra048 = {
-        nome: "SAGUI",
-        categoria:"ANIMAIS"
-    },
-    palavra049 = {
-        nome: "LAGARTIXA",
-        categoria:"ANIMAIS"
-    },
-    palavra050 = {
-        nome: "HIPOPOTAMO",
-        categoria:"ANIMAIS"
+        nome: "MACACO",
+        categoria:"TEMA: ANIMAIS"
     }
 ];
-
 
 criarPalavraSecreta();
 function criarPalavraSecreta(){
@@ -244,11 +128,11 @@ function verificaLetraEscolhida(letra){
         mudarStyleLetra("tecla-" + letra);
         comparalistas(letra);
         montarPalavraNaTela();
-    }    
+    }
 }
 
 function mudarStyleLetra(tecla){
-    document.getElementById(tecla).style.background = "#C71585";
+    document.getElementById(tecla).style.background = "#5B678F";
     document.getElementById(tecla).style.color = "#ffffff";
 }
 

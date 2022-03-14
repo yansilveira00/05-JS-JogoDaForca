@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Poppins&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -9,8 +9,8 @@ body{
     width: 100vw;
     height: 90vh;
     margin-top: 10px;
-    background-color: goldenrod;
-    font-family: 'Ubuntu', sans-serif;
+    background-color: #0d6efd;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container{
@@ -39,7 +39,7 @@ body{
 .letras{
     width: 16px;
     text-align: center;
-    border-bottom: 2px solid #8b008b;
+    border-bottom: 2px solid #0000;
     color: #ffffff;
     padding: 2px;
     margin-left: 2px;
@@ -59,8 +59,8 @@ body{
     box-shadow:  0px 2px 8px dimgray;
     border-radius: 5px;
     border: 1px solid dimgrey;  
-    color: #8b008b;
-    font-family: 'Ubuntu', sans-serif;
+    color: #777B87;
+    font-family: 'Poppins', sans-serif;
     font-weight: 900;
 }
 
@@ -74,7 +74,7 @@ body{
 
 #categoria{
     margin-top: 30px;
-    color: #8b008b;
+    color: #ffffff;
     font-size: 1.2em;
 }
 
