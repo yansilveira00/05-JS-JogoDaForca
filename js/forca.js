@@ -140,10 +140,10 @@ function comparalistas(letra){
     const pos = palavraSecretaSorteada.indexOf(letra)
     if(pos < 0){
         tentativas--
+        abreModal("ERROU!", "Tentativas restantes: " +tentativas);
         carregaImagemForca();
-
         if(tentativas == 0){
-            abreModal("OPS!", "Não foi dessa vez ... A palavra secreta era <br>" + palavraSecretaSorteada);
+            abreModal("PERDEU!", "Você foi enforcado... A palavra secreta era <br>" + palavraSecretaSorteada);
         }
     }
     else{
